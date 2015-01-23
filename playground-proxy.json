@@ -1,0 +1,23 @@
+{
+  "kind": "Pod",
+  "apiVersion": "v1beta1",
+  "id": "playground-proxy",
+  "desiredState": {
+    "manifest": {
+      "version": "v1beta1",
+      "id": "playground-proxy",
+      "containers": [{
+        "name": "playground-proxy",
+        "image": "myodc/playground-proxy",
+        "imagePullPolicy": "PullAlways",
+        "ports": [{"containerPort": 80}],
+        "env": [
+          {"name": "PROXY_DOMAIN", "value": "play.myodc.io"},
+        ]
+      }]
+    }
+  },
+  "labels": {
+    "name": "playground-proxy",
+  }
+}

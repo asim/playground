@@ -1,0 +1,20 @@
+{
+  "kind": "Pod",
+  "apiVersion": "v1beta1",
+  "id": "playground-redis",
+  "desiredState": {
+    "manifest": {
+      "version": "v1beta1",
+      "id": "playground-redis",
+      "containers": [{
+        "name": "playground-redis",
+	"image": "redis:latest",
+	"ports": [{"containerPort": 6379, "hostPort": 6379}],
+      }]
+    }
+  },
+  "labels": {
+    "name": "playground-redis",
+  }
+}
+

@@ -1,0 +1,21 @@
+{
+  "kind": "Pod",
+  "apiVersion": "v1beta1",
+  "id": "playground-registry",
+  "desiredState": {
+    "manifest": {
+      "version": "v1beta1",
+      "id": "playground-registry",
+      "containers": [{
+        "name": "playground-registry",
+        "image": "registry",
+        "ports": [{
+          "containerPort": 5000,
+        }]
+      }]
+    }
+  },
+  "labels": {
+    "name": "playground-registry",
+  }
+}
